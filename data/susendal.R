@@ -1,0 +1,1 @@
+susendal <- read.table("77750-obs2.ok")

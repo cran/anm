@@ -1,0 +1,10 @@
+anm                     The Analog method
+anm.fit                 Support function for anm
+eof                     Daily common EOF.
+plotANM                 Plot Diagnostics for an anm Object.
+predict.anm             Predict method for anm objects.
+print.anm               Print some components of an anm object.
+stepANM                 Choose a model by the analog method in a
+                        stepwise algorithm
+susendal                Daily Susendal record.
+temp.era                Daily winter common EOF.
