@@ -9,8 +9,7 @@ anm.fit(x, y, tol = 1e-07, ...)
 \arguments{
     \item{x}{design matrix of dimension n * p.}
     \item{y}{vector of observations of length n.}
-    \item{tol}{if equal to 1, information is printed during the running of step.}
-    \item{cross.valid}{tolerance for the qr decomposition. Default is 1e-7.}
+    \item{tol}{tolerance for the qr decomposition. Default is 1e-7.}
     \item{...}{currently disregarded.}
           }
 \value{
