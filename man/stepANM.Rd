@@ -26,7 +26,7 @@ stepANM(anm.obj,trace=1,steps=8)
 The running of the stepwise algorithm can be quite slow especially if the number of steps specified in the \emph{steps} argument is high.
 }  
 \author{Alexandra Imbert}
-\seealso{\link{anm}, \link{predict.anm}}
+\seealso{\link{anm}, \link{predictAnm}}
 \examples{
 library(survival)
 library(clim.pact)

@@ -1,11 +1,11 @@
-\name{predict.anm}
-\alias{predict.anm}
+\name{predictAnm}
+\alias{predictAnm}
 \title{Predict method for anm objects.}
 \description{
 Returns the predicted values based on the \link{anm} object.
 }
 \usage{
-predict.anm(object,newdata=NULL,se.fit=FALSE, ...)
+predictAnm(object,newdata=NULL,se.fit=FALSE, ...)
 }
 \arguments{
     \item{object}{the anm object inheriting from \link{anm} routine.}
@@ -51,7 +51,7 @@ test.data <-data.frame(y=y.period,
                        mm=eof$mm[eof.calib | eof.eval],
                        dd=eof$dd[eof.calib | eof.eval])
 test.anm<-anm(y ~ X1 + X2,data=test.data)
-res <- predict.anm(test.anm)
+res <- predictAnm(test.anm)
 }
 \keyword{models}
 

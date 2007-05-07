@@ -1,10 +1,10 @@
-\name{print.anm}
-\alias{print.anm}
+\name{printAnm}
+\alias{printAnm}
 \title{Print some components of an anm object.}
 \description{Prints the coefficients of an \link{anm} object.
 }
 \usage{
-print.anm(x, digits = max(3, getOption("digits") - 3), ...)
+printAnm(x, digits = max(3, getOption("digits") - 3), ...)
 }
 \arguments{
     \item{x}{the \link{anm} object.}
@@ -13,7 +13,7 @@ print.anm(x, digits = max(3, getOption("digits") - 3), ...)
           }
 \references{URL \url{http://www.R-project.org/}}
 \author{Alexandra Imbert}
-\seealso{\link{anm}, \link{predict.anm}}
+\seealso{\link{anm}, \link{predictAnm}}
 \examples{
 library(survival)
 library(clim.pact)
@@ -36,6 +36,6 @@ test.data <-data.frame(y=y.period,
                        mm=eof$mm[eof.calib | eof.eval],
                        dd=eof$dd[eof.calib | eof.eval])
 test.anm<-anm(y ~ X1 + X2,data=test.data)
-print.anm(test.anm)
+printAnm(test.anm)
 }
 \keyword{models}

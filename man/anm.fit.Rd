@@ -1,15 +1,15 @@
-\name{anm.fit}
-\alias{anm.fit}
+\name{anmFit}
+\alias{anmFit}
 \title{Support function for anm}
 \description{Basic computing engine called by \link{anm} to implement the analog method. This should usually not be used directly. 
 }
 \usage{
-anm.fit(x, y, tol = 1e-07, ...)
+anmFit(x, y, tol = 1e-07, ...)
 }
 \arguments{
     \item{x}{design matrix of dimension n * p.}
     \item{y}{vector of observations of length n.}
-    \item{tol}{tolerance for the qr decomposition. Default is 1e-7.}
+    \item{tol}{if equal to 1, information is printed during the running of step.}
     \item{...}{currently disregarded.}
           }
 \value{
@@ -24,7 +24,7 @@ anm.fit(x, y, tol = 1e-07, ...)
 }
 \references{URL \url{http://www.R-project.org/}}
 \author{Alexandra Imbert}
-\seealso{\link{anm}, \link{predict.anm}}
+\seealso{\link{anm}, \link{predictAnm}}
 \keyword{models}
 
 

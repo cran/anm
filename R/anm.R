@@ -15,7 +15,7 @@ anm <- function(formula,data,weights=NULL,cross.valid=NULL) {
   mt <- attr(mf, "terms") # allow model.frame to update it
   y <- model.response(mf, "numeric")
   x <- model.matrix(mt, mf, contrasts=NULL)
-  z<-anm.fit(x, y)
+  z<-anmFit(x, y)
   date.max<- seq(1,dim(mf[1])[1],by=1)[is.element(mf[,1],max(mf[,1],na.rm=TRUE))]
   no.pc <- length(mf)
   if (!is.null(cross.valid)){
@@ -35,7 +35,7 @@ anm <- function(formula,data,weights=NULL,cross.valid=NULL) {
 }
 
 ############################################
-anm.fit <- function (x, y, tol = 1e-07, ...)
+anmFit <- function (x, y, tol = 1e-07, ...)
 {
     if (is.null(n <- nrow(x))) stop("`x' must be a matrix")
     if(n == 0) stop("0 (non-NA) cases")
@@ -43,7 +43,7 @@ anm.fit <- function (x, y, tol = 1e-07, ...)
     if (p == 0) {
         ## oops, null model
         cc <- match.call()
-        cc[[1]] <- as.name("anm.fit.null")
+        cc[[1]] <- as.name("anmFit.null")
         return(eval(cc, parent.frame()))
     }
     ny <- NCOL(y)
@@ -87,7 +87,7 @@ anm.fit <- function (x, y, tol = 1e-07, ...)
 }
 
 ####################################################
-print.anm <- function(x, digits = max(3, getOption("digits") - 3), ...)
+printAnm <- function(x, digits = max(3, getOption("digits") - 3), ...)
 {
     cat("\nCall:\n",deparse(x$call),"\n\n",sep="")
     cat("Coefficients:\n")
@@ -101,7 +101,7 @@ print.anm <- function(x, digits = max(3, getOption("digits") - 3), ...)
 # Predicted values based on the model object. 
 # "object" is the "anm" object inheriting from "anm" routine.
 
-predict.anm<- function(object,newdata=NULL,se.fit=FALSE,...) {
+predictAnm<- function(object,newdata=NULL,se.fit=FALSE,...) {
 nx <- length(object$x) # dimension of the problem
 if (is.null(newdata)) {
    nt.1 <- length(object$y[,1])
@@ -198,7 +198,7 @@ predict
 # plotANM(test.anm,tmp=TRUE,"Tromsoe","eof_ERA-15_TEM_16E31E-64N73N",FALSE)
 
 plotANM <- function(x,tmp,station,eof.file,leps){
-res.predict <- predict.anm(x,se.fit=TRUE)
+res.predict <- predictAnm(x,se.fit=TRUE)
 nt <- res.predict$period.length
 newdata.y <- x$y[1:nt,1]
 vect.time <- c(1:nt) 
@@ -278,7 +278,7 @@ if (steps==2) stop("The number of steps and of predictor variables should be hig
   # Determination of rmse and correlation at each step
   for (i.pc in 3:(steps+1)){
      test.anm<-anm(formula,data=anm.obj$data,weights=anm.obj$weights)
-     result.predict <- predict.anm(test.anm,se.fit=TRUE)
+     result.predict <- predictAnm(test.anm,se.fit=TRUE)
      cor[i.pc-1] <- result.predict$correlation
      rmse[i.pc-1] <- result.predict$rmse
      if (trace==1){

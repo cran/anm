@@ -13,7 +13,7 @@ plotANM(x,tmp,station,eof.file,leps)
     \item{leps}{if true, postscripts are created for the plots.}
           }
 \author{Alexandra Imbert}
-\seealso{\link{anm}, \link{stepANM}, \link{predict.anm}, \link{print.anm}}
+\seealso{\link{anm}, \link{stepANM}, \link{predictAnm}, \link{printAnm}}
 \examples{
 library(survival)
 library(clim.pact)
