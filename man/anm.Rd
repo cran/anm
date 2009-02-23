@@ -32,7 +32,7 @@ An object of class "anm" is a list containing the following components:
 }
 \references{URL \url{http://www.R-project.org/}}
 \author{Alexandra Imbert}
-\seealso{link{predictAnm}, link{stepANM}}
+\seealso{\link{predictAnm}, \link{stepANM}}
 \examples{
 library(survival)
 library(clim.pact)

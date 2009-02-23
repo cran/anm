@@ -5,7 +5,8 @@
   Common EOFs for daily December-February temperature. 
 }
 \usage{data(temp.era)}
-\format{
+\format{A list}
+\value{
 \item{EOF}{EOF patterns.}
 \item{W}{Eigen values.} 
 \item{PC}{Principal components of common PCA.} 
@@ -27,7 +28,7 @@
 \item{v.name}{Name of element.} 
 \item{c.mon}{Month-season information.}
 \item{f.name}{File name of original data.} 
-   }
+}
 \source{Rasmus E. Benestad \url{rasmus.benestad@met.no}.}
 \references{
 Reference to methodology: R.E. Benestad (2001), "A comparison between two empirical downscaling strategies", Int. J. Climatology, vol 210, pp.1645-1668. [DOI 10.1002/joc.703]. 

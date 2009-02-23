@@ -159,9 +159,10 @@ for (iit in 1:nt.2) {
   }
   if ((object$cross.valid) & (sum(same)>0)) d[same] <- NA
   if (length(seq(1,length(d),by=1)[is.element(d,min(d,na.rm=TRUE))])>1)
-  date.min[iit]<-seq(1,length(d),by=1)[is.element(d,min(d,na.rm=TRUE))][1]
+    date.min[iit]<-seq(1,length(d),by=1)[is.element(d,min(d,na.rm=TRUE))][1]
   else
-  date.min[iit]<- seq(1,length(d),by=1)[is.element(d,min(d,na.rm=TRUE))]
+    date.min[iit]<- seq(1,length(d),by=1)[is.element(d,min(d,na.rm=TRUE))]
+  
   dist[iit]<- min(d,na.rm=TRUE)
   analog[iit] <- object$y[date.min[iit],1]
   error[iit] <- abs(analog[iit]-newdata.y[iit])
