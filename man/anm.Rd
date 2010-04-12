@@ -15,7 +15,7 @@ anm(formula,data,weights=NULL,cross.valid=NULL)
     \item{cross.valid}{an optional matrix of booleans. If not specified, a cross validation is used in the fitting process.}
           }
 \details{Models for \emph{anm} are specified symbolically. A typical model has the form \emph{predictand ~ terms} where \emph{terms} is a series of predictors whose specification can be of the for \emph{first + second}.
-\link{anm} calls the lower level function \link[clim.pact]{anmFit}.
+\link{anm} calls the lower level function \link{anmFit}.
 }
 \value{An object of class "anm".
 An object of class "anm" is a list containing the following components: 
