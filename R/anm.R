@@ -268,7 +268,7 @@ if (!leps) par(ask=TRUE)
 # anm.obj is the "anm" object returned by the "anm" routine.
 
 stepANM <- function(anm.obj,trace=1,steps=8) {
-library(xtable)
+#library(xtable)
 cor <- rep(NA,steps-1) # MODIF
 rmse <- rep(NA,steps-1) # MODIF
 incl <- "X1 + X2"

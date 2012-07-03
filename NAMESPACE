@@ -1,0 +1,11 @@
+import(clim.pact)
+#import(ncdf)
+#import(akima)
+
+# Exports
+export(anm)
+export(anmFit)
+export(printAnm)
+export(predictAnm)
+export(plotANM)
+export(stepANM)
